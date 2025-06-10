@@ -97,18 +97,18 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', color='darkgreen', marker='*', ax=ax)
 st.pyplot(fig)
-
-"""6) Crie um gráfico de linha que mostre a evolução dos valores dos projetos ao longo do tempo. (Peso: 2,0)
-
-Dicas:
-- Antes de plotar, deve criar uma nova variável `Data` que surgirá da concatenação de `ano` e `mês`. Para isto pode utilizar a função to_datetime: `pd.to_datetime(dict(year=df["ano"], month=df["mes"], day=1))`
-- Depois, ordene a df utilizando a nova variável `Data`, utilizando `sort_values()`
-- Para conseguir apresentar mais de uma variável (todos os projetos) no mesmo gráfico, uma dica importante está no funcionamento do pacote `matplotlib`
-  - A lógica de plotar gráfico no `matplotlib` segue o caminho das funções figure (inicia ação), plot (monta o gráfico) e show (apresenta). Logo, todos os plot que forem montados entre o figure e o show vão aparecer no mesmo gráfico
-  - `plt.figure(figsize=(10,6))`
-  - `plt.plot()`
-  - `plt.show()`
-"""
+with st.expander:
+    """6) Crie um gráfico de linha que mostre a evolução dos valores dos projetos ao longo do tempo. (Peso: 2,0)
+    
+    Dicas:
+    - Antes de plotar, deve criar uma nova variável `Data` que surgirá da concatenação de `ano` e `mês`. Para isto pode utilizar a função to_datetime: `pd.to_datetime(dict(year=df["ano"], month=df["mes"], day=1))`
+    - Depois, ordene a df utilizando a nova variável `Data`, utilizando `sort_values()`
+    - Para conseguir apresentar mais de uma variável (todos os projetos) no mesmo gráfico, uma dica importante está no funcionamento do pacote `matplotlib`
+      - A lógica de plotar gráfico no `matplotlib` segue o caminho das funções figure (inicia ação), plot (monta o gráfico) e show (apresenta). Logo, todos os plot que forem montados entre o figure e o show vão aparecer no mesmo gráfico
+      - `plt.figure(figsize=(10,6))`
+      - `plt.plot()`
+      - `plt.show()`
+    """
 
 df["Data"] = pd.to_datetime(dict(year=df["ano"], month=df["mes"], day=1))
 
