@@ -122,11 +122,11 @@ fig, ax = plt.subplots(figsize=(10,6))
 for projeto in projetos:
     ax.plot(df["Data"], df[projeto], marker="o", label=projeto, ax=ax)
 
-as.set_title("Evolução dos Fluxos de Caixa dos Projetos")
-as.set_xlabel("Tempo (Ano-Mês)")
-as.set_ylabel("Valor (R$)")
-as.legend(title="Projetos")
-as.grid(True)
+ax.set_title("Evolução dos Fluxos de Caixa dos Projetos")
+ax.set_xlabel("Tempo (Ano-Mês)")
+ax.set_ylabel("Valor (R$)")
+ax.legend(title="Projetos")
+ax.grid(True)
 fit.tight_layout()
 
 st.pyplot(fig)
