@@ -121,6 +121,7 @@ fig, ax = plt.subplots()
 plt.figure(figsize=(10,6))
 for projeto in projetos:
     ax.plot(df["Data"], df[projeto], marker="o", label=projeto, ax=ax)
+
 as.set_title("Evolução dos Fluxos de Caixa dos Projetos")
 as.set_xlabel("Tempo (Ano-Mês)")
 as.set_ylabel("Valor (R$)")
