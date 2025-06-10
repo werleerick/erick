@@ -127,6 +127,6 @@ ax.set_xlabel("Tempo (Ano-Mês)")
 ax.set_ylabel("Valor (R$)")
 ax.legend(title="Projetos")
 ax.grid(True)
-fit.tight_layout()
+fig.tight_layout()
 
 st.pyplot(fig)
